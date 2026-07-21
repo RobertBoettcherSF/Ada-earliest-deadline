@@ -20,7 +20,7 @@ Ada implementation of the Earliest Deadline First (EDF) scheduling algorithm wit
 .
 ├── edf_scheduling.ads          # Package specification
 ├── edf_scheduling.adb          # Package implementation
-├── edf_scheduling.gpr          # GPR project file (library)
+├── edf_scheduling.gpr          # GPR project file
 ├── demo.gpr                    # GPR project file for demo program
 ├── main.adb                    # Demonstration program
 ├── Makefile                    # Build automation
@@ -37,7 +37,7 @@ Ada implementation of the Earliest Deadline First (EDF) scheduling algorithm wit
 
 Install the GNAT Ada compiler:
 
-- **Ubuntu/Debian**: `sudo apt install gnat`
+- **Ubuntu/Debian**: `sudo apt install gnat gprbuild`
 - **macOS (Homebrew)**: `brew install gnat`
 - **Windows**: Download from [libre.adacore.com](https://libre.adacore.com/)
 
@@ -65,19 +65,16 @@ make help
 #### Option 2: Manual Compilation
 
 ```bash
-# Create required directories
+# Create required directories (they exist in the repo but may need recreation after clean)
 mkdir -p obj bin
 
-# Build the library
- gprbuild -P edf_scheduling.gpr
+# Build the main demonstration program
+gprbuild -P demo.gpr
+./bin/main
 
 # Build and run tests
- gprbuild -P tests/test_runner.gpr
- ./bin/edf_tests
-
-# Build and run demonstration
- gprbuild -P demo.gpr
- ./bin/main
+gprbuild -P tests/test_runner.gpr
+./bin/edf_tests
 ```
 
 ## Test Suite

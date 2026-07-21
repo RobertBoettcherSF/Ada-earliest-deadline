@@ -17,7 +17,7 @@ test: tests/edf_tests.adb tests/test_runner.gpr
 
 # Run the main simulation
 run: build
-	./bin/edf_scheduling
+	./bin/main
 
 # Create necessary directories
 obj bin:
