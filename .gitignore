@@ -1,5 +1,19 @@
-# Object file
+# Build directories
+obj/
+bin/
+
+# Object files
 *.o
 
 # Ada Library Information
 *.ali
+
+# IDE/Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
