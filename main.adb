@@ -107,13 +107,13 @@ procedure Main is
       
       Initialize (Standard_Non_Preemptive);
       
-      -- Long running task
-      Config1 := (ID => 1, Type_Of_Task => Aperiodic, Criticality => Low,
-                  Release_Time => 0, Computation_Time => 5, Deadline => 10, Period => 1);
+      -- Long running periodic task
+      Config1 := (ID => 1, Type_Of_Task => Periodic, Criticality => Low,
+                  Release_Time => 0, Computation_Time => 5, Deadline => 10, Period => 10);
       
-      -- Short task with earlier deadline arriving later
-      Config2 := (ID => 2, Type_Of_Task => Aperiodic, Criticality => Low,
-                  Release_Time => 2, Computation_Time => 1, Deadline => 3, Period => 1);
+      -- Short periodic task with earlier deadline arriving later
+      Config2 := (ID => 2, Type_Of_Task => Periodic, Criticality => Low,
+                  Release_Time => 2, Computation_Time => 1, Deadline => 3, Period => 10);
       
       Add_Task (Config1);
       Add_Task (Config2);

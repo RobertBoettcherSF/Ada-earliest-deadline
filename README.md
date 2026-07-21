@@ -21,7 +21,7 @@ Ada implementation of the Earliest Deadline First (EDF) scheduling algorithm wit
 ├── edf_scheduling.ads          # Package specification
 ├── edf_scheduling.adb          # Package implementation
 ├── edf_scheduling.gpr          # GPR project file
-├── demo.gpr                    # GPR project file for demo program
+├── edf_demo.gpr                    # GPR project file for demo program
 ├── main.adb                    # Demonstration program
 ├── Makefile                    # Build automation
 ├── tests/
@@ -69,7 +69,7 @@ make help
 mkdir -p obj bin
 
 # Build the main demonstration program
-gprbuild -P demo.gpr
+gprbuild -P edf_demo.gpr
 ./bin/main
 
 # Build and run tests
@@ -137,7 +137,7 @@ make run
 Or manually:
 ```bash
 mkdir -p obj bin
-gprbuild -P demo.gpr
+gprbuild -P edf_demo.gpr
 ./bin/main
 ```
 
