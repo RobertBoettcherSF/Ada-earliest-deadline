@@ -9,7 +9,7 @@ project EDF_Scheduling is
       for Default_Switches ("Ada") use ("-gnat12", "-gnata", "-gnatwa");
    end Compiler;
 
-   -- Main program (optional - can be overridden by command line)
-   -- for Main use ("main.adb");
+   -- Main program
+   for Main use ("main.adb");
 
 end EDF_Scheduling;
